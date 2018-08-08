@@ -1,7 +1,7 @@
 <div class="sidebar">
     <ul class="widget widget-menu unstyled">
         <li class="active">
-          <a href="{{ route('home') }}"><i class="menu-icon icon-dashboard"></i>Home</a>
+          <a href="{{ route('home') }}"><i class="menu-icon icon-home"></i>Home</a>
         </li>
         <li><a href="activity.html"><i class="menu-icon icon-bullhorn"></i>News Feed </a>
         </li>
@@ -22,13 +22,17 @@
     </ul>
     <!--/.widget-nav-->
     <ul class="widget widget-menu unstyled">
-        <li><a class="collapsed" data-toggle="collapse" href="#togglePages"><i class="menu-icon icon-cog">
-        </i><i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right">
-        </i>More Pages </a>
+        <li>
+          <a class="collapsed" data-toggle="collapse" href="#togglePages">
+            <i class="menu-icon icon-group"></i>
+            <i class="icon-chevron-down pull-right"></i>
+            <i class="icon-chevron-up pull-right"></i>
+            Usuários
+          </a>
             <ul id="togglePages" class="collapse unstyled">
-                <li><a href="other-login.html"><i class="icon-inbox"></i>Login </a></li>
-                <li><a href="other-user-profile.html"><i class="icon-inbox"></i>Profile </a></li>
-                <li><a href="other-user-listing.html"><i class="icon-inbox"></i>All Users </a></li>
+              <li><a href="other-login.html"><i class="icon-user"></i>Novo Aluno </a></li>
+              <li><a href="other-user-listing.html"><i class="icon-list"></i>Lista de Alunos </a></li>
+              <li><a href="other-user-profile.html"><i class="icon-lock"></i>Alterar Senha </a></li>
             </ul>
         </li>
         <li><a href="#"><i class="menu-icon icon-signout"></i>Logout </a></li>
