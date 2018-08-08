@@ -2,7 +2,7 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html">WebClass </a>
+                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html">{{ config('app.name', 'WebClass') }} </a>
                     <div class="nav-collapse collapse navbar-inverse-collapse">
                         <ul class="nav nav-icons">
                             <li class="active"><a href="#"><i class="icon-envelope"></i></a></li>
@@ -31,11 +31,20 @@
                                 <img src="edmin/images/user.png" class="nav-avatar" />
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Your Profile</a></li>
-                                    <li><a href="#">Edit Profile</a></li>
-                                    <li><a href="#">Account Settings</a></li>
+                                    <li>Auth::user()->name</li>
+                                    <li><a href="#">Alterar Senha</a></li>
                                     <li class="divider"></li>
-                                    <li><a href="#">Logout</a></li>
+                                    <li>
+                                      <a href="{{ route('logout') }}"
+                                          onclick="event.preventDefault();
+                                                   document.getElementById('logout-form').submit();">
+                                          Logout
+                                      </a>
+
+                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                          {{ csrf_field() }}
+                                      </form>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

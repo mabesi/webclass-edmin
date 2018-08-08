@@ -1,15 +1,15 @@
-@extends('admin.layouts.base')
+@extends('layouts.base')
 
 @section('body')
 
-@include('admin.layouts.navbar')
+@include('layouts.navbar')
 
 <div class="wrapper">
     <div class="container">
         <div class="row">
             <div class="span3">
 
-              @include('admin.layouts.sidebar')
+              @include('layouts.sidebar')
 
             </div>
             <!--/.span3-->
@@ -28,7 +28,7 @@
 </div>
 <!--/.wrapper-->
 
-@include('admin.layouts.footer')
+@include('layouts.footer')
 
 @endsection
 
