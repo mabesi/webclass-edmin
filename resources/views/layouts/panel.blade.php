@@ -16,7 +16,9 @@
             <div class="span9">
                 <div class="content">
 
-                @yield('content')
+                  @include('layouts.messages')
+
+                  @yield('content')
 
                 </div>
                 <!--/.content-->
@@ -32,10 +34,11 @@
 
 @endsection
 
-@push('scripts')
+@push('all_scripts')
   <!-- Backend Scripts -->
   <script src="{{ asset("edmin/scripts/flot/jquery.flot.js") }}" type="text/javascript"></script>
   <script src="{{ asset("edmin/scripts/flot/jquery.flot.resize.js") }}" type="text/javascript"></script>
   <script src="{{ asset("edmin/scripts/datatables/jquery.dataTables.js") }}" type="text/javascript"></script>
   <script src="{{ asset("edmin/scripts/common.js") }}" type="text/javascript"></script>
+  @stack('scripts')
 @endpush

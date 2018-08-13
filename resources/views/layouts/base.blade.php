@@ -27,14 +27,15 @@
 @yield('body')
 
   <!-- Base Scripts -->
-	<script src="{{ asset("edmin/scripts/jquery-1.9.1.min.js") }}" type="text/javascript"></script>
+	<!-- <script src="{{ asset("edmin/scripts/jquery-1.9.1.min.js") }}" type="text/javascript"></script> -->
+	<script src="{{ asset("edmin/scripts/jquery-3.3.1.min.js") }}" type="text/javascript"></script>
 	<script src="{{ asset("edmin/scripts/jquery-ui-1.10.1.custom.min.js") }}" type="text/javascript"></script>
 	<script src="{{ asset("edmin/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
 
-  @stack('scripts')
+  @stack('all_scripts')
 
   <!-- App Script -->
-  <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('js/app.js') }}" type="text/javascript" ></script>
 
 </body>
 </html>
