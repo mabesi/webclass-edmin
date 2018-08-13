@@ -16,3 +16,27 @@ function getItemAdminIcons($item,$itemType,$resource)
 
   return trim($icons);
 }
+
+function getCategories()
+{
+  $categories = [
+    "Administração",
+    "Áudio e Vídeo",
+    "Contabilidade",
+    "Design Gráfico",
+    "Direito",
+    "Gestão",
+    "Idiomas",
+    "Informática",
+    "Marketing",
+    "Motivação",
+    "Negócios",
+    "Psicologia",
+    "Relações Humanas",
+    "Segurança",
+    "Turismo e Hotelaria",
+    "Outros"
+  ];
+
+  return $categories;
+}
