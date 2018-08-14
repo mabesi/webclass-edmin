@@ -16,7 +16,7 @@
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
 
   <!-- App CSS -->
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet">
 
   <!-- Page CSS -->
   @stack('css')

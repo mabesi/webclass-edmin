@@ -7,10 +7,10 @@
     <a href="{{ url('user') }}" class="btn-box big span4"><i class=" icon-group"></i><b>{{ $totalPupil }}</b>
       <p class="text-muted">Alunos</p>
     </a>
-    <a href="{{ url('categories') }}" class="btn-box big span4"><i class="icon-th-list"></i><b>{{ $totalCategories }}</b>
+    <a href="{{ url('category') }}" class="btn-box big span4"><i class="icon-th-list"></i><b>{{ $totalCategories }}</b>
       <p class="text-muted">Categorias</p>
     </a>
-    <a href="{{ url('course') }}" class="btn-box big span4"><i class="icon-th-large"></i><b>15</b>
+    <a href="{{ url('course') }}" class="btn-box big span4"><i class="icon-th-large"></i><b>{{ $totalCourses }}</b>
       <p class="text-muted">Cursos</p>
     </a>
   </div>

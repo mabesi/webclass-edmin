@@ -4,3 +4,7 @@
   color: #e5e5e5;
   background-color: #595959;
 }
+
+div.col {
+  border: 1px solid black;
+}

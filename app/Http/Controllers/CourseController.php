@@ -14,7 +14,13 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+      $courses = Course::orderBy('title')
+                    ->paginate(10);
+      $data = [
+        'courses' => $courses,
+      ];
+
+      return view('course.list',$data);
     }
 
     /**
@@ -46,7 +52,11 @@ class CourseController extends Controller
      */
     public function show(Course $course)
     {
-        //
+      $data = [
+        'course' => $course,
+      ];
+
+      return view('course.course',$data);        
     }
 
     /**

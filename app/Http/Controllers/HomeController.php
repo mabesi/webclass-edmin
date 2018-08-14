@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Course;
 
 class HomeController extends Controller
 {
@@ -25,11 +26,23 @@ class HomeController extends Controller
     public function index()
     {
         $totalPupil = User::where('type','U')->count();
-        $totalCategories = getCategories();
+        $totalCourses = User::count();
+        $totalCategories = count(getCategories());
+
         $data = [
           'totalPupil' => $totalPupil,
-          'totalCategories' => count($totalCategories),
+          'totalCategories' => $totalCategories,
+          'totalCourses' => $totalCourses,
         ];
         return view('home',$data);
+    }
+
+    public function categories()
+    {
+      $categories = getCategories();
+      $data = [
+        'categories' => $categories,
+      ];
+      return view('category.list',$data);
     }
 }

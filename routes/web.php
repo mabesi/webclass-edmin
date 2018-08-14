@@ -14,5 +14,7 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/category', 'HomeController@categories');
 
 Route::resource('user', 'UserController');
+Route::resource('course', 'CourseController');
