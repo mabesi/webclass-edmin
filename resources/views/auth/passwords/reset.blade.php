@@ -61,7 +61,7 @@
 
             <div class="control-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
               <div class="controls row-fluid">
-                <input class="span12" type="password" id="password_confirm" placeholder="Confirme a Nova Senha" name="password_confirmation" required>
+                <input class="span12" type="password" id="password_confirmation" placeholder="Confirme a Nova Senha" name="password_confirmation" required>
 
                 @if ($errors->has('password_confirmation'))
                     <span class="help-block">
